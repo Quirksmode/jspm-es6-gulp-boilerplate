@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title ng-bind="pageTitle"></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/images/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/images/favicon/android-chrome-manifest.json">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#059caf">
+    <meta name="msapplication-TileImage" content="assets/images/favicon/mstile-144x144.png">
+    <meta name="msapplication-square150x150logo" content="assets/images/favicon/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="assets/images/favicon/mstile-310x310.png">
+    <meta name="msapplication-square70x70logo" content="assets/images/favicon/mstile-70x70.png">
+    <meta name="msapplication-wide310x150logo" content="assets/images/favicon/mstile-310x150.png">
+    <meta name="theme-color" content="#059caf">
+
+    <link href="assets/css/styles.css" rel="stylesheet" />
+
+    <!-- inject:header:js -->
+    <!-- endinject -->
+</head>
+
+<body>
+    {% include "modules/components/headers/header-primary/header-primary.html" %}
+
+    {% include "modules/pages/page-home/page-home.html" %}
+
+    {% include "modules/components/footers/footer-primary/footer-primary.html" %}
+
+    <!-- inject:footer:js -->
+    <!-- endinject -->
+
+    <!-- app:js -->
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('modules/main');
+    </script>
+    <!-- endinject -->
+
+</body>
+
+</html>

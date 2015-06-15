@@ -1,0 +1,44 @@
+/**
+ * @group css.styles
+ *
+ * This is the core/primary stylesheet for the whole site, all other stylesheets are pulled in by this one.
+ * It is mobile first so we declare all our base styles first add more through media queries
+ *
+ */
+
+// ------------------------------------------------
+// Common Styles
+// ------------------------------------------------
+
+// Import Mixins
+@import "__mixins/mq";
+@import "__mixins/rg";
+@import "__mixins/mixins";
+
+// Import Base Styles
+@import "__base/normalize";
+@import "__base/layout";
+@import "__base/helpers";
+@import "__base/colours";
+@import "__base/fonts";
+@import "__base/base";
+@import "__base/buttons";
+
+
+// ------------------------------------------------
+// Module Styles
+// ------------------------------------------------
+
+// Component Styles
+@import "../../modules/components/headers/header-primary/header-primary";
+@import "../../modules/components/headers/header-primary/nav-primary/nav-primary";
+@import "../../modules/components/footers/footer-primary/footer-primary";
+
+
+// ------------------------------------------------
+// Page Styles
+// ------------------------------------------------
+
+// Common Page Modules
+@import "../../modules/pages/page/page";
+@import "../../modules/pages/page-home/page-home";

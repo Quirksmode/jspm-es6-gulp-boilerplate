@@ -1,0 +1,95 @@
+/**
+ * Here we define the colour variables that are used throughout the other stylesheets
+
+ * @group css.base.colours
+ *
+ * ## Usage
+ * Import into your main file using
+ *
+ * @example
+ *     @import "__base/_colours.scss";
+ *
+ */
+
+/**
+ * Primary Colours
+ *
+ * Colour names: http://chir.ag/projects/name-that-color/
+ */
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-blue
+ */
+$color-blue : #005cb9;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-mine-shaft
+ */
+$color-mine-shaft : #333;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-dove-gray
+ */
+$color-dove-gray : #666;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-spring-wood
+ */
+$color-spring-wood : #f7f3ef;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-hint-of-red
+ */
+$color-hint-of-red : #F7F5F5;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-bondi-blue
+ */
+$color-bondi-blue : #059caf;
+
+
+/**
+ * Social Colours
+ */
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-twitter
+ */
+$color-social-twitter : #00aced;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-facebook
+ */
+$color-social-facebook : #3b5998;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-linkedin
+ */
+$color-social-linkedin : #007bb6;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-instagram
+ */
+$color-social-instagram : #517fa4;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-google
+ */
+$color-social-google: #dd4b39;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-youtube
+ */
+$color-social-youtube : #bb0000;

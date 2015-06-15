@@ -1,0 +1,5 @@
+app/src/jspm_packages
+app/dest
+.sass-cache
+*.css.map
+node_modules
