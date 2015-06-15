@@ -1,5 +1,8 @@
-Front End Readme
+jspm-es6-gulp-boilerplate
 =====================================
+
+NB: This is still work in progress and will be changing over the next few days
+
 
 ### Prerequisite's
 
@@ -97,8 +100,5 @@ This project uses jsdoc to automatically generate Documentation via `gulp prod`.
 
 ##### Inspiration and Helpful Links
 
-- http://fdietz.github.io/2015/04/13/day-1-how-to-build-your-own-team-chat-in-five-days.html
+- https://github.com/Quirksmode/responsive-grids
 - http://developer.telerik.com/featured/choose-es6-modules-today/
-- http://martinmicunda.com/2015/02/09/how-to-start-writing-apps-with-es6-angular-1x-and-jspm/
-- https://github.com/Workiva/karma-jspm
-- http://teropa.info/blog/2014/10/24/how-ive-improved-my-angular-apps-by-banning-ng-controller.html
