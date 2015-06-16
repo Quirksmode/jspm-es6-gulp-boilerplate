@@ -2,7 +2,7 @@
 
 var dest = "./app/dest";
 var src = './app/src';
-var proxy = "novartiscommunity.dev";
+var proxy = "examplesite.dev";
 
 module.exports = {
 
