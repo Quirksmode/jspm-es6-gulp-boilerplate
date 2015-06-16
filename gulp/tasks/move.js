@@ -12,6 +12,6 @@ gulp.task('move', function() {
         ], { base: './app/src/' })
         .pipe(gulp.dest('./app/dest'))
         .on('end', function () {
-        	browserSync.reload({stream:true});
+        	browserSync.reload();
         });
 });
