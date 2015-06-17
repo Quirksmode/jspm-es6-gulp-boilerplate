@@ -4,7 +4,7 @@ var gulp          = require('gulp');
 var swig          = require('gulp-swig');
 var browserSync   = require('browser-sync');
 
-gulp.task('swig', ['inject'], function() {
+gulp.task('swig', function() {
     return gulp.src([
             './app/src/**/*.html',
             '!./app/src/**/*.tpl.html',
@@ -15,6 +15,5 @@ gulp.task('swig', ['inject'], function() {
             cache: false
           }
         }))
-        .pipe(gulp.dest('./app/dest'))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(gulp.dest('./app/dest'));
 });

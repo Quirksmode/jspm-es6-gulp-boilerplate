@@ -9,7 +9,7 @@ var browserSync   = require('browser-sync');
 var gutil         = require('gulp-util');
 
 gulp.task('inject', function() {
-    return gulp.src('./app/src/index.html')
+    return gulp.src('./app/dest/index.html')
         .pipe(inject(gulp.src(['./app/dest/assets/js/inline/header.js']), {
             starttag: '<!-- inject:header:{{ext}} -->',
             transform: function (filePath, file) {
@@ -30,5 +30,6 @@ gulp.task('inject', function() {
                 ignorePath: '/app/dest/'
             }) :
             gutil.noop())
-        .pipe(gulp.dest('./app/dest'));
+        .pipe(gulp.dest('./app/dest'))
+        .pipe(browserSync.reload({stream:true}));
 });
