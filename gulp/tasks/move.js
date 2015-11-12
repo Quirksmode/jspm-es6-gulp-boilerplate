@@ -5,13 +5,11 @@ var config        = require('../config');
 var browserSync   = require('browser-sync');
 
 gulp.task('move', function() {
-    return gulp.src([
-            './app/src/modules/**/*',
-            './app/src/config.js',
-            './app/src/jspm_packages/**/*'
-        ], { base: './app/src/' })
-        .pipe(gulp.dest('./app/dest'))
-        .on('end', function () {
-        	browserSync.reload();
-        });
+    return gulp.src(
+        global.isProd ? config.move.prod.src : config.move.dev.src,
+        { base: config.move.base })
+    .pipe(gulp.dest(config.move.dest))
+    .on('end', function () {
+    	browserSync.reload();
+    });
 });

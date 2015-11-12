@@ -17,7 +17,7 @@ gulp.task('styles', function () {
   return gulp.src(config.styles.src)
     .pipe(sass({
       sourceComments: global.isProd ? 'none' : 'map',
-      sourceMap: 'sass',
+      //sourceMap: 'sass', // disabled, seems .map files are not being copied, creating 404 errors
       outputStyle: global.isProd ? 'compressed' : 'nested'
     }))
     .on('error', function() {
