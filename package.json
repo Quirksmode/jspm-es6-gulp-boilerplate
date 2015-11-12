@@ -8,6 +8,7 @@
     "sass",
     "boilerplate"
   ],
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.9.12",
     "del": "^2.0.2",
@@ -35,9 +36,9 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "app/src",
-      "lib": "."
+      "baseURL": "app/src"
     },
+    "configFile": "jspm.config.js",
     "dependencies": {
       "jquery": "github:components/jquery@^2.1.4"
     },

@@ -17,6 +17,11 @@ module.exports = {
         //proxy: proxy,
         server: {
            baseDir: dest.root,
+           // serve our jspm dependencies with the client folder
+           routes: {
+                '/jspm.config.js': './jspm.config.js',
+                '/jspm_packages': './jspm_packages'
+            }
         },
         //tunnel: "novartis"
     },
@@ -35,7 +40,7 @@ module.exports = {
         base: src,
         dev: {
             src: [
-                src + '/assets/js/lib/**/*',
+                //src + '/assets/js/lib/**/*',
                 src + '/modules/**/*.js',
                 src + '/modules/**/*.tpl.html'
             ]
@@ -46,23 +51,24 @@ module.exports = {
                 src + '/modules/**/*.tpl.html'
             ]
         },
-        dest: dest.assets + '/js/app/'
+        //dest: dest.assets + '/js/app/'
+        dest: dest.root
     },
 
     moveJSPM: {
-        base: './',
+        base: src,
         dev: {
             src: [
-                src + '/config.js',
+                src + '/jspm.config.js',
                 src + '/jspm_packages/**/*'
             ],
         },
         prod: {
             src: [
-                src + '/config.js'
+                src + '/jspm.config.js'
             ],
         },
-        dest: dest.assets + '/js/app/'
+        dest: dest.root
     },
 
     moveTemplates: {
