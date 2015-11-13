@@ -56,16 +56,16 @@ module.exports = {
     },
 
     moveJSPM: {
-        base: src,
+        base: './',
         dev: {
             src: [
-                src + '/jspm.config.js',
-                src + '/jspm_packages/**/*'
+                './jspm.config.js',
+                './jspm_packages/**/*'
             ],
         },
         prod: {
             src: [
-                src + '/jspm.config.js'
+                './jspm.config.js'
             ],
         },
         dest: dest.root

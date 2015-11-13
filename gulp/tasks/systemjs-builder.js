@@ -9,7 +9,7 @@ var path = require('path');
 gulp.task('systemjs-builder', function (cb) {
     // load SystemJS config from file
     var builder = new Builder();
-    builder.loadConfig('./config.js')
+    builder.loadConfig('./jspm.config.js')
     .then(function() {
         // Change baseURL to match the file system
         builder.config({ baseURL: path.resolve("./") });
