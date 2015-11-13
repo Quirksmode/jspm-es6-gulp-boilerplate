@@ -16,11 +16,11 @@ System.config({
 System.config({
   "map": {
     "angular": "github:angular/bower-angular@1.4.7",
-    "babel": "npm:babel-core@5.4.7",
-    "babel-runtime": "npm:babel-runtime@5.4.7",
+    "babel": "npm:babel-core@5.8.34",
+    "babel-runtime": "npm:babel-runtime@5.8.34",
     "clean-css": "npm:clean-css@3.4.7",
-    "core-js": "npm:core-js@0.9.14",
-    "jquery": "github:components/jquery@2.1.3",
+    "core-js": "npm:core-js@0.9.18",
+    "jquery": "github:components/jquery@2.1.4",
     "main.config": "modules/main.config",
     "ng-file-upload": "github:danialfarid/ng-file-upload@10.0.2",
     "textAngular": "github:fraywing/textAngular@1.4.6",
@@ -79,6 +79,9 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
+    "npm:babel-runtime@5.8.34": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:buffer@3.5.1": {
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.6",
@@ -106,6 +109,11 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:core-js@0.9.14": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:core-js@0.9.18": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"

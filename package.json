@@ -40,8 +40,8 @@
     "configFile": "jspm.config.js",
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.7",
-      "danialfarid/ng-file-upload": "github:danialfarid/ng-file-upload@^10.0.2",
       "jquery": "github:components/jquery@^2.1.4",
+      "ng-file-upload": "github:danialfarid/ng-file-upload@^10.0.2",
       "textAngular": "github:fraywing/textAngular@^1.4.6",
       "textangular": "npm:textangular@^1.4.6"
     },
