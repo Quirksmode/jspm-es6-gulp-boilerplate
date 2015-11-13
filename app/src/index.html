@@ -54,12 +54,16 @@
     <!-- inject:footer:js -->
     <!-- endinject -->
 
-    <!-- app:js -->
-    <script src="jspm_packages/system.js"></script>
-    <script src="jspm.config.js"></script>
-    <script>
-      System.import('modules/bootstrap');
-    </script>
+    <!-- app:dev:js -->
+        <script src="jspm_packages/system.js"></script>
+        <script src="jspm.config.js"></script>
+        <script>
+          System.import('modules/bootstrap');
+        </script>
+    <!-- endinject -->
+
+    <!-- app:prod:js -->
+        <script src="assets/js/app.js"></script>
     <!-- endinject -->
 
 </body>

@@ -24,7 +24,7 @@ let mainModule = angular.module('mainApp',[
     // 'ngMessages',
     // 'ngAnimate',
     'ngSanitize',
-    // 'ngFileUpload',
+    'ngFileUpload',
     // 'ui.bootstrap',
     'textAngular',
 
