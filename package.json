@@ -36,20 +36,18 @@
     "systemjs-builder": "^0.10.6"
   },
   "jspm": {
-    "directories": {},
     "configFile": "jspm.config.js",
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.7",
       "jquery": "github:components/jquery@^2.1.4",
       "ng-file-upload": "github:danialfarid/ng-file-upload@^10.0.2",
-      "textAngular": "github:fraywing/textAngular@^1.4.6",
-      "textangular": "npm:textangular@^1.4.6"
+      "textAngular": "github:fraywing/textAngular@^1.4.6"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.1.13",
-      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
       "clean-css": "npm:clean-css@^3.4.7",
-      "core-js": "npm:core-js@^0.9.4"
+      "core-js": "npm:core-js@^1.1.4"
     }
   }
 }
