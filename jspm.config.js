@@ -38,14 +38,11 @@ System.config({
     "clean-css": "npm:clean-css@3.4.7",
     "core-js": "npm:core-js@1.2.6",
     "jquery": "github:components/jquery@2.1.4",
-    "ng-file-upload": "github:danialfarid/ng-file-upload@10.0.2",
+    "ng-file-upload": "github:danialfarid/ng-file-upload-bower@10.0.2",
     "github:angular/bower-angular-animate@1.4.7": {
       "angular": "github:angular/bower-angular@1.4.7"
     },
     "github:angular/bower-angular-messages@1.4.7": {
-      "angular": "github:angular/bower-angular@1.4.7"
-    },
-    "github:danialfarid/ng-file-upload@10.0.2": {
       "angular": "github:angular/bower-angular@1.4.7"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
