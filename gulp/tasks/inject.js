@@ -39,5 +39,7 @@ gulp.task('inject', ['move-templates'], function() {
           }
         }))
         .pipe(gulp.dest(config.dest.templates))
-        .pipe(browserSync.reload({stream:true}));
+        .on('end', function () {
+            browserSync.reload();
+        });
 });
