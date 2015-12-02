@@ -11,7 +11,7 @@
 
 'use strict';
 
-console.log("loaded");
+console.log("Scoll On Click UI Widget Loaded");
 
 /**
  * @class scrollOnClick

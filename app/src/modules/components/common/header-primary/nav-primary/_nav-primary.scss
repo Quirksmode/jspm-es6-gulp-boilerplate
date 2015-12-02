@@ -14,3 +14,12 @@
  .nav-primary {
 
  }
+
+ 	.nav-primary__nav {
+ 		list-style-type: none;
+
+ 		li {
+ 			float: left;
+ 			margin-right: 20px;
+ 		}
+ 	}

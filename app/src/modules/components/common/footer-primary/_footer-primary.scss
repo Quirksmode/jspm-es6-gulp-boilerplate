@@ -11,6 +11,14 @@
  *
  */
 
- .footer-primary {
+.footer-primary {
+	padding: 20px;
+	background: #333;
 
- }
+	color: #fff;
+}
+
+	.footer-primary__back-to-top {
+		float: right;
+		color: #fff;
+	}

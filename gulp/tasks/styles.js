@@ -7,7 +7,7 @@ var gulpif       = require('gulp-if');
 var handleErrors = require('../util/handleErrors');
 var browserSync  = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
-var cmq          = require('gulp-combine-media-queries');
+var mmq          = require('gulp-merge-media-queries');
 var minifycss    = require('gulp-minify-css');
 var gutil        = require('gulp-util');
 var gnotify      = require('gulp-notify');
@@ -26,7 +26,7 @@ gulp.task('styles', function () {
         this.emit('end');
     })
     .pipe(autoprefixer("last 2 versions", "ie 9"))
-    .pipe(cmq({ log: true }))
+    .pipe(mmq({ log: true }))
     .pipe(global.isProd ? minifycss() : gutil.noop())
     .pipe(gulp.dest(config.styles.dest))
     .pipe(browserSync.reload({stream:true}));
