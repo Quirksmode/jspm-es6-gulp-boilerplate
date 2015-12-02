@@ -18,6 +18,8 @@ console.log("Scoll On Click UI Widget Loaded");
  */
 function scrollOnClick() {
   return {
+    controllerAs: 'vm',
+    bindToController: true,
     restrict: 'AC',
     scope: {
         scrollTo: '@',

@@ -8,7 +8,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jspm', 'mocha', 'chai'],
+    frameworks: ['jspm', 'jasmine'],
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
@@ -32,11 +32,11 @@ module.exports = function(config) {
     jspm: {
       // Edit this to your needs
       config: 'jspm.config.js',
-      loadFiles: ['client/app/**/*.spec.js'],
+      loadFiles: ['app/src/**/*.spec.js'],
       serveFiles: [
-        'client/app/**/*.js',
-        'client/app/**/*.html',
-        'client/app/**/*.css'
+        'app/src/**/*.js',
+        'app/src/**/*.html',
+        'app/src/**/*.css'
       ]
     },
 
