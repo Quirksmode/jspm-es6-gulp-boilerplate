@@ -15,11 +15,16 @@ System.config({
   map: {
     "angular": "github:angular/bower-angular@1.4.8",
     "angular-mocks": "github:angular/bower-angular-mocks@1.4.8",
+    "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "clean-css": "npm:clean-css@3.4.8",
     "core-js": "npm:core-js@1.2.6",
     "jquery": "github:components/jquery@2.1.4",
+    "text": "github:systemjs/plugin-text@0.0.3",
+    "github:angular-ui/ui-router@0.2.15": {
+      "angular": "github:angular/bower-angular@1.4.8"
+    },
     "github:angular/bower-angular-mocks@1.4.8": {
       "angular": "github:angular/bower-angular@1.4.8"
     },

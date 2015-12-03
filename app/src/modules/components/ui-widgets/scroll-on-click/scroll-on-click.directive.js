@@ -18,16 +18,16 @@ console.log("Scoll On Click UI Widget Loaded");
  */
 function scrollOnClick() {
   return {
-    controllerAs: 'vm',
-    bindToController: true,
     restrict: 'AC',
     scope: {
         scrollTo: '@',
-        scrollSpeed: '@'
+        scrollSpeed: '@',
+        stickyHeader: '@'
     },
     link: (scope, element) => {
         let scrollSpeed = scope.scrollSpeed || 600,
             scrollTo = scope.scrollTo || 'body, html',
+            stickyHeader = scope.stickyHeader || '',
             topBar = 0;
 
         /*
@@ -43,7 +43,7 @@ function scrollOnClick() {
 
             // If scrolling to an element add the sticky header height
             if(scope.scrollTo) {
-                topBar = angular.element('.header-primary__nav').outerHeight();
+                topBar = angular.element(stickyHeader).outerHeight();
             }
 
             // Make sure the scroll to target exists
