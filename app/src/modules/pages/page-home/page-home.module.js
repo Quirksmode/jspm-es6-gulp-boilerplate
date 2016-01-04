@@ -1,3 +1,10 @@
+/**
+  * @ngdoc overview
+  * @name PageHome
+  * @description
+  * PageHome Module and Config
+  */
+
 'use strict'
 
 import angular from 'angular';
@@ -5,7 +12,7 @@ import 'angular-ui-router';
 import pageHomeDirective from './page-home.directive';
 
 
-export default angular.module('pageHome', [
+export default angular.module('PageHome', [
 	'ui.router'
 ])
 .config(['$stateProvider',

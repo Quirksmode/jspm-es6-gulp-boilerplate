@@ -1,14 +1,3 @@
-/**
- * @class ScrollOnClick.scrollOnClick
- *
- * ## Description
- * Allows the user to scroll to a certain element on click.
- *
- * Attach to element as a class or as an attribute:
- * <div scroll-on-click></div> or <div class="scroll-on-click"></div>
- *
- */
-
 'use strict';
 
 console.log("Scoll On Click UI Widget Loaded");

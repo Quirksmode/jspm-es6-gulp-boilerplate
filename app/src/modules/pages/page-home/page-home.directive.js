@@ -1,6 +1,18 @@
+/**
+ * @ngdoc directive
+ * @name PageHome.directive:pageHome
+ * @scope
+ * @restrict E
+ *
+ * @description
+ * Directive for PageHome Module
+ *
+ * @param {object}  field   A field object
+ *
+ */
+
 import template from './page-home.html!text';
 import controller from './page-home.controller';
-//import './about.css!';
 
 let pageHomeDirective = function(){
 	return {

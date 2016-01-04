@@ -1,3 +1,10 @@
+/**
+  * @ngdoc overview
+  * @name app
+  * @description
+  * Main Module for this application
+  */
+
 'use strict';
 
 /* exported $ */
@@ -28,9 +35,11 @@ export default angular.module('app',[
     pageHomeModule.name,
     pageAboutModule.name
 
-])
-.config(['$stateProvider', '$locationProvider',
-    function($stateProvider, $locationProvider) {
-        $locationProvider.html5Mode(true);
-    }
 ]);
+
+// Remove # from URL (Needs Server Config)
+// .config(['$stateProvider', '$locationProvider',
+//     function($stateProvider, $locationProvider) {
+//         $locationProvider.html5Mode(true);
+//     }
+// ]);

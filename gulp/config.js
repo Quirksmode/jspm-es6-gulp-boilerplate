@@ -1,11 +1,15 @@
 'use strict';
 
 var src = './app/src';
+
+// Some projects required these paths to be different
 var dest = {
     root: './app/dest',
     templates: './app/dest',
     assets: './app/dest/assets'
 };
+
+// Used by BrowserSync
 var proxy = "examplesite.dev";
 
 module.exports = {
@@ -24,6 +28,20 @@ module.exports = {
             }
         },
         //tunnel: "novartis"
+    },
+
+    docs: {
+        js: {
+            src: src + '/modules/**/*.js',
+            dest: './docs/js'
+        },
+        css: {
+            src: [
+                src + '/assets/scss/**/*.scss',
+                src + '/modules/**/*.scss'
+            ],
+            dest: './docs/css'
+        }
     },
 
     fonts: {
