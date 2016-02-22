@@ -1,7 +1,7 @@
 'use strict';
 
 // Import the Vendor Specific Scripts e.g. jQuery
-import './vendor';
+import $ from 'jquery';
 
 // Import modules
 import headerPrimary from './components/headers/header-primary/header-primary';

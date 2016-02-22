@@ -214,10 +214,11 @@ $mq-media-type: all !default;
             $media-type: '';
             $media-query: str-slice(unquote($media-query), 6);
         }
-
+        // styleguide:ignore:start
         @media #{$media-type + $media-query} {
             @content;
         }
+        // styleguide:ignore:end
     }
 }
 
@@ -231,10 +232,12 @@ $mq-media-type: all !default;
 /// @example scss
 ///  @include mq-add-breakpoint(tvscreen, 1920px);
 ///  @include mq(tvscreen) {}
+// styleguide:ignore:start
 @mixin mq-add-breakpoint($name, $width) {
     $new-breakpoint: ($name: $width);
     $mq-breakpoints: map-merge($mq-breakpoints, $new-breakpoint) !global;
 }
+// styleguide:ignore:end
 
 /// Show the active breakpoint in the top right corner of the viewport
 /// @link https://github.com/sass-mq/sass-mq#seeing-the-currently-active-breakpoint

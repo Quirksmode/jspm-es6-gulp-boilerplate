@@ -1,15 +1,12 @@
 /**
+ * Fonts
  * @group css.base.fonts
- *
- * Here we define the font styles
- *
- * ## Usage
- * Import into your main file using
- *
- * @example
- *     @import "__base/_fonts.scss";
- *
  */
+
+
+// ------------------------------------------------
+// Font Variables
+// ------------------------------------------------
 
 /**
  * @group css.base.fonts
@@ -17,38 +14,37 @@
  */
 $font-arial: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
-/**
- * The globally used html styles are declared here
- */
+
+// ------------------------------------------------
+// Global Font Styles
+// ------------------------------------------------
+
+// Font Sizing
 html {
-	font-size: 62.5%;
-	-webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 
-/**
- * The globally used font styles are declared here
- */
 body {
-	font-family: $font-arial;
+    font-family: $font-arial;
 }
 
-/**
- * h1 styles
- */
+// Heading Styles
 h1 {
-	@include font(34, 38, $font-arial);
+    @include font(34, 38, $font-arial);
     font-weight: 300;
 }
 
 h2,
 h3 {
-    @include font(24, 28);
+    @include font(24, 28, $font-arial);
 }
 
 p,
-li {
-	@include font(14, 18);
+li,
+a {
+    @include font(14, 18);
 
     @include mq($from: tablet) {
         @include font(15, 19);
@@ -60,10 +56,9 @@ li {
 }
 
 a {
-	@include font(14, 18);
-    transition: color 0.3s ease-out;
+    @include font(14, 18);
+    transition: color $transition-hover-speed $transition-hover-easing;
     text-decoration: none;
-    color: $color-blue;
 }
 
 // Font Animations
@@ -74,7 +69,7 @@ h4,
 p,
 li,
 span {
-    transition: font 0.3s ease;
+    transition: font $transition-hover-speed $transition-hover-easing;
 }
 
 // Better font rendering
@@ -90,6 +85,7 @@ a,
 span,
 input,
 label,
+textarea,
 time,
 button,
 address {

@@ -1,9 +1,6 @@
 /**
+ * Core/Primary stylesheet for this application, all other stylesheets are pulled into this one.
  * @group css.styles
- *
- * This is the core/primary stylesheet for the whole site, all other stylesheets are pulled in by this one.
- * It is mobile first so we declare all our base styles first add more through media queries
- *
  */
 
 // ------------------------------------------------
@@ -17,31 +14,30 @@
 
 // Import Base Styles
 @import "__base/normalize";
-@import "__base/layout";
+@import "__base/variables";
+@import "__base/z-index";
 @import "__base/helpers";
+@import "__base/layout";
+@import "__base/base";
+@import "__base/accessibility";
 @import "__base/colours";
 @import "__base/fonts";
-@import "__base/base";
 @import "__base/buttons";
+@import "__base/form";
+@import "__base/animations";
+@import "__base/loaders";
 
 
 // ------------------------------------------------
 // Module Styles
 // ------------------------------------------------
 
-// Component Styles
-@import "../../modules/components/headers/header-primary/header-primary";
-@import "../../modules/components/headers/header-primary/nav-primary/nav-primary";
-@import "../../modules/components/footers/footer-primary/footer-primary";
+// Common Page Component Styles
+@import "../../modules/components/common/header-primary/header-primary";
+@import "../../modules/components/common/header-primary/nav-primary/nav-primary";
+@import "../../modules/components/common/footer-primary/footer-primary";
+@import "../../modules/components/common/hero-primary/hero-primary";
 
-
-// ------------------------------------------------
-// Page Styles
-// ------------------------------------------------
-
-// Page Common Modules
-@import "../../modules/pages/page/hero-primary/hero-primary";
-
-// Page Modules
+// Page Specific Styles
 @import "../../modules/pages/page/page";
 @import "../../modules/pages/page-home/page-home";

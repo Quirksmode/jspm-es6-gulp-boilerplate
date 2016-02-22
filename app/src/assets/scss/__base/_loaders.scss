@@ -1,0 +1,87 @@
+/**
+ * Loaders
+ * @group css.base.loaders
+ *
+ */
+
+
+// Default Loading class
+// This is applied to all loaders and sets up the base loading styles
+// All further loading classes are modifiers e.g. loading--hide-content
+.loading {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+
+        animation-name: rotate;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 0.5s;
+        animation-delay: 0.2s;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../img/loader/loader.svg");
+
+        .lt-ie10 & {
+            opacity: 1;
+            background-image: url("../img/loader/loader.gif");
+        }
+    }
+}
+
+.loading--small {
+    &::before {
+        width: 25px;
+        height: 25px;
+
+    }
+}
+
+// Align the loader to the center of the screen and not the div the class is attached to
+.loading--centered {
+    &::before {
+        @include z-index(loading--centered);
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        margin-left: -40px; /* Width of image /2 */
+        margin-top: -40px; /* Height of image /2 */
+        position: fixed;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+// Removes the content from the div the loading class is attached to
+.loading--hide-content {
+    > * {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute !important;
+        width: 1px;
+    }
+}
+
+// When you want to add a loader to a component and you need to create some empty space around it
+// e.g. a loader for a full width component like the Comments.
+.loading--create-space {
+    min-height: 80px;
+    display: block;
+    width: 100%;
+}

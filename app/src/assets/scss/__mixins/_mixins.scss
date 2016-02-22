@@ -1,20 +1,6 @@
 /**
+ * Mixins
  * @group css.mixins.mixins
- *
- * Here we define the reusable helper mixins
- *
- * ## Usage
- * Import into your main file using
- *
- * @example
- *     @import "__mixins/_mixins.scss";
- *
- *
- * ## Additional
- * Please note that we use auto prefixr for browser prefixes, so please use this for custom mixins
- *
- * @example
- *     @include transition(all 0.3s ease-out);
  */
 
 /**

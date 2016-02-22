@@ -1,0 +1,74 @@
+/**
+ * Form
+ * @group css.base.form
+ */
+
+.form {
+    fieldset {
+        border: none;
+        min-width: 0; // Fix for Word-Wrap bug
+
+        legend {
+            @extend .vhdn;
+        }
+    }
+
+    label,
+    .label {
+        @include font(14, 18, $font-arial);
+        font-weight: bold;
+        margin-bottom: 7px;
+        display: inline-block;
+
+        span {
+            @include font(12, 16);
+            font-weight: 300;
+            display: inline-block;
+            color: #888;
+        }
+
+        @include mq($from: smalldesktop) {
+             @include font(16, 20);
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        @include font(14, 18, $font-arial);
+        transition: border $transition-hover-speed $transition-hover-easing;
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: inset 0px 1px 3px 1px rgba(206,206,206,0.30);
+        border: 1px solid #cecece;
+        background: #fff;
+
+        &.form__input--full {
+            max-width: none;
+            width: 100%;
+        }
+
+        @include mq($from: tablet) {
+             max-width: 318px;
+        }
+
+        @include mq($from: smalldesktop) {
+             @include font(16, 20);
+        }
+    }
+
+    textarea {
+        resize: none;
+        word-wrap: break-word;
+    }
+
+    input[type="submit"] {
+        border: none;
+        padding: 20px 55px;
+        font-weight: 300;
+    }
+}

@@ -1,68 +1,45 @@
 /**
+ * Colours
  * Here we define the colour variables that are used throughout the other stylesheets
-
+ * For Colour names check out {@link http://chir.ag/projects/name-that-color/ Name That Colour}
+ * Theme colours are defined via CMS (index/theme-css.html)
  * @group css.base.colours
- *
- * ## Usage
- * Import into your main file using
- *
- * @example
- *     @import "__base/_colours.scss";
- *
  */
 
-/**
- * Primary Colours
- *
- * Colour names: http://chir.ag/projects/name-that-color/
- */
 
-/**
- * @group css.base.colours
- * @param {color} $color-blue
- */
-$color-blue : #005cb9;
+// ------------------------------------------------
+// Application Colours
+// ------------------------------------------------
 
 /**
  * @group css.base.colours
  * @param {color} $color-mine-shaft
  */
-$color-mine-shaft : #333;
+$color-mine-shaft: #333;
 
 /**
  * @group css.base.colours
  * @param {color} $color-dove-gray
  */
-$color-dove-gray : #666;
+$color-dove-gray: #666;
 
 /**
  * @group css.base.colours
  * @param {color} $color-spring-wood
  */
-$color-spring-wood : #f7f3ef;
+$color-spring-wood: #f7f3ef;
 
 /**
  * @group css.base.colours
  * @param {color} $color-hint-of-red
  */
-$color-hint-of-red : #F7F5F5;
-
-/**
- * @group css.base.colours
- * @param {color} $color-bondi-blue
- */
-$color-bondi-blue : #059caf;
+$color-hint-of-red: #F7F5F5;
 
 
-/**
- * Social Colours
- */
 
-/**
- * @group css.base.colours
- * @param {color} $color-social-twitter
- */
-$color-social-twitter : #00aced;
+// ------------------------------------------------
+// Social Colours
+// ------------------------------------------------
 
 /**
  * @group css.base.colours
@@ -72,9 +49,9 @@ $color-social-facebook : #3b5998;
 
 /**
  * @group css.base.colours
- * @param {color} $color-social-linkedin
+ * @param {color} $color-social-google
  */
-$color-social-linkedin : #007bb6;
+$color-social-google: #dd4b39;
 
 /**
  * @group css.base.colours
@@ -84,12 +61,85 @@ $color-social-instagram : #517fa4;
 
 /**
  * @group css.base.colours
- * @param {color} $color-social-google
+ * @param {color} $color-social-linkedin
  */
-$color-social-google: #dd4b39;
+$color-social-linkedin : #007bb6;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-twitter
+ */
+$color-social-twitter : #00aced;
 
 /**
  * @group css.base.colours
  * @param {color} $color-social-youtube
  */
 $color-social-youtube : #bb0000;
+
+// Define a social colour array
+$colors-social: (
+    facebook:     $color-social-facebook,
+    google:       $color-social-google,
+    instagram:    $color-social-instagram,
+    linkedin:     $color-social-linkedin,
+    twitter:      $color-social-twitter,
+    youtube:      $color-social-youtube
+);
+
+// Loop through and generate social colour classes
+@each $social-network, $color-social in $colors-social {
+    .color-social--#{$social-network} {
+        background: $color-social;
+    }
+    .color-social--#{$social-network}:hover {
+        background: lighten($color-social, 10%);
+    }
+}
+
+
+// ------------------------------------------------
+// State Indicator Colours
+// ------------------------------------------------
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-form-error
+ *
+ */
+$color-form-error: #ed1c24;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-form-warning
+ *
+ */
+$color-form-warning: #f0ad4e;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-form-success
+ *
+ */
+$color-form-success: #00A651;
+
+.color--success {
+    color: $color-form-success !important;
+}
+
+.color--warning {
+    color: $color-form-warning !important;
+}
+
+.color--error {
+    color: $color-form-error !important;
+}
+
+
+
+// ------------------------------------------------
+// Primary Font Colour
+// ------------------------------------------------
+body {
+    color: #000;
+}

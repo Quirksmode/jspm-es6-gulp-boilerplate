@@ -1,0 +1,32 @@
+/**
+ * Z-Index
+ * Define the z-index stacking for the site
+ * @group css.base.z-index
+ *
+ * @example
+ *     @include z-index(navigation);
+ */
+
+// ------------------------------------------------
+// Define Z-Index Order
+// ------------------------------------------------
+
+$z-index: (
+    // Accessibility links
+    acc-links               : 1000,
+
+    footer             		: 100,
+);
+
+
+// ------------------------------------------------
+// Functional - Do Not Edit
+// ------------------------------------------------
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

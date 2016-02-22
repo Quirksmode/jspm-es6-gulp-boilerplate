@@ -164,7 +164,11 @@
 
         .col-#{$i}-#{$numberOfColumns}, #{$string} {
             width: rg-getWidth($i, $numberOfColumns, $margin);
+        }
 
+        // Allow columns to be poisitoned
+        .push-#{$i} {
+            margin-left: rg-getWidth($i, $numberOfColumns, $margin) + ($margin * 3);
         }
     }
 }

@@ -1,41 +1,24 @@
 /**
+ * Helpers
  * @group css.base.helpers
- *
- * Here we define the reusable helper classes
- *
- * ## Usage
- * Import into your main file using
- *
- * @example
- *     @import "__base/_helpers.scss";
- *
  */
 
-/**
- * Clearfix
- */
-
+// Clearfix
 .cf {
   zoom: 1;
-	&:before, &:after { content: ""; display: table; }
-	&:after { clear: both; }
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both; }
 }
 
 
-/**
-* Hidden - Hide from both screenreaders and browsers:
-*/
-
+// Hidden - Hide from both screenreaders and browsers:
 .hdn {
     display: none;
     visibility: hidden;
 }
 
 
-/**
-* Visually Hidden
-*/
-
+// Visually Hidden
 .vhdn {
     @include vhdn;
 }
@@ -45,29 +28,20 @@
 }
 
 
-/**
-* Visually Hidden on Focus - Extends the .vhdn class to allow the element to be focusable
-*/
-
+// Visually Hidden on Focus - Extends the .vhdn class to allow the element to be focusable
 .vhdn.focus:active,
 .vhdn.focus:focus {
-	@include vhdn-off;
+    @include vhdn-off;
 }
 
 
-/**
-* Invisible - Hide visually and from screen readers, but maintain layout
-*/
-
+// Invisible - Hide visually and from screen readers, but maintain layout
 .invs {
     visibility: hidden;
 }
 
 
-/**
-* Aspect Ratio Wrapper
-*/
-
+// Aspect Ratio Wrapper
 .aspect-wrap {
     // Wrapper
     position: relative;
@@ -93,4 +67,18 @@
         width: 100%;
         height: 100%;
     }
+}
+
+
+// Table Alignment
+.t-r {
+    display: table;
+    height: 100%;
+}
+
+.t-c {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
 }
