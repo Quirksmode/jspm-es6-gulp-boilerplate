@@ -4,7 +4,7 @@
 import $ from 'jquery';
 
 // Import modules
-import headerPrimary from './components/headers/header-primary/header-primary';
+import headerPrimary from './components/common/header-primary/header-primary';
 import scrollOnClick from './components/ui-widgets/scroll-on-click/scroll-on-click';
 
 // Run the modules

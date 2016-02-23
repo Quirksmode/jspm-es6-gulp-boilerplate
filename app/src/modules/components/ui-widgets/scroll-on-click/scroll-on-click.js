@@ -19,7 +19,7 @@ class scrollOnClick {
 
         this.options = $.extend(this.defaults, options);
 
-        this.exampleFunction();
+        this.init();
     }
 
     /**
@@ -27,8 +27,11 @@ class scrollOnClick {
      *
      * @method setEventListeners
      */
-    exampleFunction() {
+    init() {
         console.log('Loaded Scroll On Click');
+        $('.js-scroll-on-click').on('click', function(){
+            console.log('Clicked');
+        })
     }
 
 }

@@ -19,15 +19,15 @@ class headerPrimary {
 
         this.options = $.extend(this.defaults, options);
 
-        this.exampleFunction();
+        this.init();
     }
 
     /**
-     * Sets event listeners required for the class
+     * Write your description here
      *
-     * @method setEventListeners
+     * @method init
      */
-    exampleFunction() {
+    init() {
         console.log('Loaded Header Primary');
     }
 

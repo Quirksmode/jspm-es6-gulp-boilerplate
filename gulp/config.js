@@ -124,7 +124,7 @@ module.exports = {
     },
 
     systemjsBuilder: {
-        src: 'app/src/modules/bootstrap',
+        src: 'app/src/modules/main',
         dest: dest.assets + '/js/app.js'
     }
 

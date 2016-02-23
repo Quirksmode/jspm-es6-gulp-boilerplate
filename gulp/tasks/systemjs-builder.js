@@ -1,10 +1,6 @@
 var gulp   = require('gulp');
-var Builder = require('systemjs-builder');
 var config = require('../config');
-var path = require('path');
 var jspm = require('jspm');
-
-
 
 
 /**
@@ -20,7 +16,7 @@ gulp.task('systemjs-builder', function (cb) {
         config.systemjsBuilder.src,
         config.systemjsBuilder.dest,
         {
-            minify: true,
+            minify: false,
             sourceMaps: false
         }
     ).then(function() {
