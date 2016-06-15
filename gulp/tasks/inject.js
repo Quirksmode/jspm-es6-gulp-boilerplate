@@ -5,7 +5,6 @@ var inject        = require('gulp-inject');
 var config        = require('../config');
 var gutil         = require('gulp-util');
 var browserSync   = require('browser-sync');
-var swig          = require('gulp-swig');
 
 gulp.task('inject', ['move-templates'], function() {
     return gulp.src(config.dest.templates + '/index.html')
@@ -33,11 +32,6 @@ gulp.task('inject', ['move-templates'], function() {
         		inject(gulp.src(""), {starttag: '<!-- app:dev:js -->', transform: function (filePath, file) { return ""; } })
         		: inject(gulp.src(""), {starttag: '<!-- app:prod:js -->', transform: function (filePath, file) { return ""; } })
         )
-        .pipe(swig({
-          defaults: {
-            cache: false
-          }
-        }))
         .pipe(gulp.dest(config.dest.templates))
         .pipe(browserSync.reload({stream:true}));
 });

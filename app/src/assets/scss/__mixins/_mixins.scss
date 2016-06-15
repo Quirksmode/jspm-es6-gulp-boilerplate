@@ -31,14 +31,8 @@
  *     @include font(14, 16);
  */
 @mixin font($fontSize: 1.6, $lineHeight: $fontSize * 1.5, $fontFamily: inherit) {
-    $lteIE8: false !default;
-
     @if $fontFamily != inherit {
         font-family: $fontFamily;
-    }
-    @if $lteIE8 {
-      font-size: $fontSize + px;
-      line-height: $lineHeight + px;
     }
     @else {
       font-size: ($fontSize / 10) + rem;
@@ -57,31 +51,12 @@
  *     @include background-transparent(#000, .8);
  */
 @mixin background-transparent($color, $alpha) {
-  $lteIE8: false !default;
-
   $rgba: rgba($color, $alpha);
   $ie-hex-str: ie-hex-str($rgba);
   background-color: transparent;
   background-color: $rgba;
-
-  // Only IE8 should out see these styles
-  @if $lteIE8 == true {
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
-    zoom: 1;
-  }
 }
 
-
-/**
- * @param {number} $opacity
- *
- * @example
- *     @include opacity(0.5);
- */
-@mixin opacity($opacity) {
-    opacity: $opacity;
-    filter:alpha(opacity=$opacity*100); /* For IE8 and earlier */
-}
 
 
 /**

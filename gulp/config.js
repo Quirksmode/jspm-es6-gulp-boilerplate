@@ -1,8 +1,10 @@
 'use strict';
 
-var src = './app/src';
+var historyApiFallback = require('connect-history-api-fallback');
 
-// Some projects required these paths to be different
+
+// Enter your custom paths here
+var src = './app/src';
 var dest = {
     root: './app/dest',
     templates: './app/dest',
@@ -21,6 +23,7 @@ module.exports = {
         //proxy: proxy,
         server: {
            baseDir: dest.root,
+           middleware: [ historyApiFallback() ],
            // serve our jspm dependencies with the client folder
            routes: {
                 '/jspm.config.js': './jspm.config.js',
@@ -129,6 +132,19 @@ module.exports = {
             src + '/modules/**/*.scss'
         ],
         dest: dest.assets + '/css'
+    },
+
+    sassLint: {
+        src: [
+            src + '/assets/scss/**/*.scss',
+            src + '/modules/**/*.scss',
+            '!' + src + '/assets/scss/__lib/*.scss',
+            '!' + src + '/assets/scss/__mixins/*.scss',
+            '!' + src + '/assets/scss/__base/_normalize.scss',
+        ],
+        options: {
+            'config-file': './../.sass-lint.yml'
+        }
     },
 
     svg: {

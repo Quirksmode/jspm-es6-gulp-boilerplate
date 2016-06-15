@@ -17,9 +17,13 @@ import 'angular-ui-router';
 // Import UI Modules
 import scrollOnClickModule          from './components/ui-widgets/scroll-on-click/scroll-on-click.module';
 
+// Import Common Modules
+import headerPrimaryModule          from './components/common/header-primary/header-primary.module';
+import footerPrimaryModule          from './components/common/footer-primary/footer-primary.module';
+
 // Page Specific Modules
 import pageHomeModule          		from './pages/page-home/page-home.module';
-import pageAboutModule          	from './pages/page-about/page-about.module';
+import pageSearchModule          	from './pages/page-search/page-search.module';
 
 
 // Setup the app module
@@ -31,15 +35,16 @@ export default angular.module('app',[
     // UI Modules
     scrollOnClickModule.name,
 
+    // Common Modules
+    headerPrimaryModule.name,
+    footerPrimaryModule.name,
+
     // Page Specific Modules
     pageHomeModule.name,
-    pageAboutModule.name
+    pageSearchModule.name
 
+]).config(['$locationProvider',
+    function($locationProvider) {
+        $locationProvider.html5Mode(true);
+    }
 ]);
-
-// Remove # from URL (Needs Server Config)
-// .config(['$stateProvider', '$locationProvider',
-//     function($stateProvider, $locationProvider) {
-//         $locationProvider.html5Mode(true);
-//     }
-// ]);

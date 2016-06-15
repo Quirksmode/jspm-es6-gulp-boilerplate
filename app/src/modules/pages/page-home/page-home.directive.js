@@ -11,7 +11,7 @@
  *
  */
 
-import template from './page-home.html!text';
+import template from './page-home.tpl.html!text';
 import controller from './page-home.controller';
 
 let pageHomeDirective = function(){

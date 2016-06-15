@@ -11,8 +11,16 @@ var mmq          = require('gulp-merge-media-queries');
 var minifycss    = require('gulp-minify-css');
 var gutil        = require('gulp-util');
 var gnotify      = require('gulp-notify');
+var sassLint     = require('gulp-sass-lint');
 
-gulp.task('styles', function () {
+gulp.task('sass-lint', function () {
+    return gulp.src(config.sassLint.src)
+        .pipe(sassLint(config.sassLint.options))
+        .pipe(sassLint.format())
+        // .pipe(sassLint.failOnError())
+});
+
+gulp.task('styles', ['sass-lint'], function () {
 
   return gulp.src(config.styles.src)
     .pipe(sass({

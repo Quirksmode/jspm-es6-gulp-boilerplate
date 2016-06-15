@@ -62,11 +62,12 @@ iframe {
 }
 
 .acc-links li a {
-	@include font(26, 30);
+	
     opacity: 0.7;
     color:#fff;
     background:#000;
     padding:10px;
+    @include font(26, 30);
 }
 
 
