@@ -1,18 +1,17 @@
 /**
+ * Buttons
  * @group css.base.buttons
- *
- * Here we define the UI styles
- *
- * ## Usage
- * Import into your main file using
- *
- * @example
- *     @import "__base/_buttons.scss";
- *
  */
 
-/* Buttons */
+.btn {
+    transition: color $transition-hover-speed $transition-hover-easing, background $transition-hover-speed $transition-hover-easing, border $transition-hover-speed $transition-hover-easing;
+    border-radius: 5px;
+    border: none;
+    
+}
 
-.btn { 
-	cursor: pointer;
+// Extension of the base btn class
+.btn--example {
+    background: #fff;
+    padding: 5px 10px;
 }

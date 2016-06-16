@@ -1,0 +1,137 @@
+/**
+ * Loaders
+ * @group css.base.loaders
+ *
+ * @example
+ *     <div class="loading loading--hide-content">
+ */
+
+
+// Default Loading class
+// This is applied to all loaders and sets up the base loading styles
+// All further loading classes are modifiers e.g. loading--hide-content
+.loading {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+
+        animation-name: rotate;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 0.5s;
+        animation-delay: 0.2s;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../img/loader/loader.svg");
+
+        .lt-ie10 & {
+            opacity: 1;
+            background-image: url("../img/loader/loader.gif");
+        }
+    }
+}
+
+.loading--small {
+    &::after {
+        width: 25px;
+        height: 25px;
+
+    }
+}
+
+// Align the loader to the center of the screen and not the div the class is attached to
+.loading--centered {
+    &::after {
+        @include z-index(loading--centered);
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        margin-left: -40px; /* Width of image /2 */
+        margin-top: -40px; /* Height of image /2 */
+        position: fixed;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+// Create an overlay for the spinner
+.loading--overlay {
+    position: relative;
+
+    &::after {
+        @include z-index(loading--overlay);
+        animation: almostFadeIn ease-in 1;
+        animation-fill-mode: forwards;
+        animation-duration: 0.4s;
+        animation-delay: 0;
+
+        opacity: 0;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #fff;
+
+        .lt-ie10 & {
+            opacity: 1;
+        }
+    }
+
+    // When attached to the page we want this to show below the main nav
+    &.page {
+        &::after {
+            @include z-index(page__loading--overlay);
+        }
+    }
+}
+
+// When the page loads, place this as far back as it can go
+.loading--initial {
+    &::after {
+        z-index: z-index(loading--initial);
+    }
+}
+
+// Removes the content from the div the loading class is attached to
+.loading--hide-content {
+    > * {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute !important;
+        width: 1px;
+    }
+}
+
+// When you want to add a loader to a component and you need to create some empty space around it
+// e.g. a loader for a full width component like the Comments.
+.loading--create-space {
+    min-height: 80px;
+    display: block;
+    width: 100%;
+}
+
+// Removes the div until the page has loaded
+.loading--hidden {
+    @extend .vhdn;
+}

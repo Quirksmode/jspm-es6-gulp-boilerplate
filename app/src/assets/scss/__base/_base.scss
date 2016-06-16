@@ -1,29 +1,23 @@
 /**
- * This is for the remaining base/globally applied styles that cannot be defined in the other Base folder stylesheets (e.g. colours, fonts etc.)
- *
+ * Base
  * @group css.base.base
- *
- * ## Usage
- * Import into your main file using
- *
- * @example
- *     @import "__base/base";
- *
  */
 
-/**
- * Custom Resets
- */
- p, pre, blockquote, a, ul, ol, li, h1, h2, h3, h4, h5, h6, figure {
+// Custom Resets
+p, pre, blockquote, a, ul, ol, li, h1, h2, h3, h4, h5, h6, figure, fieldset {
     margin:0;
     padding:0;
 }
 
-/**
- * Global Styles
- */
+
+// Global Styles
 body {
     background: #fff;
+
+    // Use this class for the sticky header
+    &.header-primary--sticky {
+        
+    }
 }
 
 img {
@@ -39,53 +33,9 @@ iframe {
 }
 
 
-/**
-* Fix the box sizing
-*/
-
+// Fix the box sizing
 *,
 *:after,
 *:before {
     box-sizing: border-box;
-}
-
-
-/**
-* Accessibility Links
-*/
-
-.acc-links {
-    top:80px;
-    left: 10px;
-    position: absolute;
-    z-index: 500;
-}
-
-.acc-links li a {
-	
-    opacity: 0.7;
-    color:#fff;
-    background:#000;
-    padding:10px;
-    @include font(26, 30);
-}
-
-
-/**
-* No Javascript/Browser Message
-*/
-
-.no-browser,
-.no-script {
-    background-color: #000;
-    color: #fff;
-    display: block;
-    padding: 50px 20px;
-    text-align: center;
-    position:relative;
-    z-index: 999;
-
-    p {
-        @include font(22, 28);
-    }
 }

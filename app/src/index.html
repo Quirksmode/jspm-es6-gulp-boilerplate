@@ -48,9 +48,31 @@
 </head>
 
 <body>
-    <header-primary></header-primary>
-    <div ui-view></div>
-    <footer-primary></footer-primary>
+
+    <noscript>
+        <div class="no-script">
+            <p>For full functionality of this site it is necessary to enable JavaScript.</p>
+            <p>Here are the <a href="http://www.enable-javascript.com/" target="_blank"> instructions how to enable JavaScript in your web browser</a>.</p>
+        </div>
+    </noscript>
+    <!--[if lt IE 9]>
+        <div class="no-browser">
+            <p>Sorry, we do not support this browser.</p>
+            <p>Here are the instructions <a href="http://whatbrowser.org/" target="_blank" data-track="header|click|browser">how to upgrade your web browser</a>.</p>
+            <p>If you're using Internet Explorer, 'compatibility mode' can also affect the way this site looks.</p>
+            <p>Please follow these instructions <a href="http://windows.microsoft.com/en-GB/internet-explorer/products/ie-9/features/compatibility-view" target="_blank" data-track="header|click|compatibility">how to switch compatibility mode off</a>.</p>
+        </div>
+    <![endif]-->
+
+    <ul class="acc-links">
+        <li><a href="##nav-primary" class="vhdn focus">Skip To Main Navigation</a></li>
+        <li><a href="##main" class="vhdn focus">Skip To Main Content</a></li>
+        <li><a href="##footer-primary" class="vhdn focus">Skip To Footer</a></li>
+    </ul>
+
+    <header-primary id="header-primary"></header-primary>
+    <div id="main" ui-view></div>
+    <footer-primary id="footer-primary"></footer-primary>
 
     <!-- inline scripts -->
     <script src="assets/js/inline/lib/svg4everybody.js" inline></script>

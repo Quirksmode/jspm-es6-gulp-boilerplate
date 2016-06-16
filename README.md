@@ -1,14 +1,11 @@
 jspm-es6-gulp-boilerplate
 =====================================
 
-NB: This is still work in progress and will be changing over the next few days
-
-
 ### Prerequisite's
 
 - You must install n `$ npm install -g n`
-- This project uses n v0.12.0 `$ n 0.12.0`
-- This project uses npm v2.5.1 `$ npm install npm -g.`
+- This project uses n v4.4.5 `$ n 4.4.5`
+- This project uses npm v2.15.5 `$ npm install npm -g.`
 - This project uses JSPM `$ npm install jspm -g`
 
 ---
@@ -63,9 +60,8 @@ Gulp is used here to provide a very basic node/Express web server for viewing an
 
 A number of build processes are automatically run on all of our Javascript files:
 
-- **JSHint:** Gulp is currently configured to run a JSHint task before processing any Javascript files. This will show any errors in your code in the console, but will not prevent compilation or minification from occurring.
+- **ESHint:** Gulp is currently configured to run a ESint task before processing any Javascript files. This will show any errors in your code in the console, but will not prevent compilation or minification from occurring.
 - **SystemJS Builder:** Provides a single-file build for SystemJS of mixed-dependency module trees. Builds ES6 into ES5, CommonJS, AMD and globals into a single file in a way that supports the CSP SystemJS loader as well as circular references.
-- **Inline JS:** For any scripts that need to occur before the DOM or before the main build JS file has loaded there are two JS files that are generated `header.js` and `footer.js` and automatically injected into the index.html.
 
 When `gulp prod` is run the resulting file (`app.js`) is placed inside the directory `/dest/js/`.
 
@@ -97,6 +93,23 @@ Just as there is the `gulp` task for development, there is also a `gulp prod` ta
 ##### Generating Documentation
 
 This project uses jsdoc to automatically generate Documentation via `gulp prod`. See http://usejsdoc.org/ for more information. Use `gulp doc` to generate the docs manually.
+
+
+##### Testing
+
+This project uses Karma with Mocha and Chai. Please ensure you have installed the following:
+
+- Karma (globally)
+- Karma CLI (globally)
+- Karma Chai
+- Karma Chrome Launcher
+- Karma JSPM
+- Karma Mocha
+- Karma Mocha Reporter
+- Mocha (globally)
+
+To run the tests use `$ karma start`
+
 
 ##### Inspiration and Helpful Links
 

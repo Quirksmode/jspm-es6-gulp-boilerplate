@@ -1,0 +1,14 @@
+/**
+ * Form
+ * @group css.base.form
+ */
+
+.form {
+    fieldset {
+        border: none;
+
+        legend {
+            @extend .vhdn;
+        }
+    }
+}

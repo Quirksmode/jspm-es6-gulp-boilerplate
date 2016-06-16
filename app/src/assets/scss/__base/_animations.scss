@@ -1,0 +1,277 @@
+/**
+ * Animations
+ * Shared animations styles, these work in conjunction with ngAnimate
+ * We also declare Keyframe animations here
+ * @group css.base.animations
+ */
+
+// Hide elements before Angular has initialised
+.ng-cloak {
+    display: none !important;
+}
+
+// Animations
+.anim--fade {
+    &.ng-enter,
+    &.ng-leave {
+        transition: opacity $transition-hover-speed $transition-hover-easing;
+    }
+
+    &.ng-enter {
+        opacity: 0;
+    }
+
+    &.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+
+    &.ng-leave {
+        opacity: 1;
+    }
+
+    &.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+}
+
+.anim--fade-in {
+    &.ng-enter,
+    &.ng-leave {
+        transition: opacity $transition-hover-speed $transition-hover-easing;
+    }
+
+    &.ng-enter {
+        opacity: 0;
+    }
+
+    &.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+
+    &.ng-leave {
+        opacity: 1;
+    }
+
+    &.ng-leave.ng-leave-active {
+        transition: all 0s $transition-hover-easing;
+        opacity: 0;
+    }
+}
+
+.anim--fade-slow {
+    &.ng-enter,
+    &.ng-leave {
+        transition: opacity 0.8s $transition-hover-easing;
+    }
+
+    &.ng-enter {
+        opacity: 0;
+    }
+
+    &.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+
+    &.ng-leave {
+        opacity: 1;
+    }
+
+    &.ng-leave.ng-leave-active {
+        transition: all 0s $transition-hover-easing;
+        opacity: 0;
+    }
+}
+
+.anim--grow {
+    &.ng-enter,
+    &.ng-leave {
+        transition: all 0.5s $transition-hover-easing;
+        overflow: hidden;
+    }
+
+    &.ng-enter {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    &.ng-enter.ng-enter-active {
+        max-height: 999px;
+        opacity: 1;
+    }
+
+    &.ng-leave {
+        max-height: 999px;
+        opacity: 1;
+    }
+
+    &.ng-leave.ng-leave-active {
+        transition: all 0s $transition-hover-easing;
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
+.anim--grow-slow {
+    &.ng-enter,
+    &.ng-leave {
+        transition: all 1s $easeInOutQuad 0.2s;
+        /* easeInOutBack */
+        transition-timing-function: $easeInOutQuad;
+        /* easeInOutBack */
+        overflow: hidden;
+    }
+
+    &.ng-enter {
+        max-height: 0;
+    }
+
+    &.ng-enter.ng-enter-active {
+        max-height: 999px;
+    }
+
+    &.ng-leave {
+        max-height: 999px;
+    }
+
+    &.ng-leave.ng-leave-active {
+        max-height: 0;
+    }
+}
+
+.anim--fade-down {
+
+    // ng-if
+    &.ng-enter,
+    &.ng-leave,
+    &.ng-show {
+        transition: opacity $transition-hover-speed $transition-hover-easing, transform $transition-hover-speed $transition-hover-easing;
+    }
+
+    &.ng-enter {
+        opacity: 0;
+        transform: translate(0, -10px);
+    }
+
+    &.ng-enter.ng-enter-active {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    &.ng-leave {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    &.ng-leave.ng-leave-active {
+        opacity: 0;
+        transform: translate(0, -10px);
+    }
+
+    // ng-show
+    &.ng-show {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    &.ng-hide {
+        opacity: 0;
+        transform: translate(0, -10px);
+    }
+}
+
+.anim--fade-stagger {
+    // Stagger animations to ensrue they animate one-by-one rather
+    // than animate at the same time
+    &.ng-enter-stagger, //&.ng-leave-stagger,
+    &.ng-move-stagger {
+        transition-delay: 0.2s;
+    }
+
+    &.ng-enter,
+    &.ng-leave,
+    &.ng-move {
+        transition: opacity $transition-hover-speed $transition-hover-easing;
+    }
+
+    &.ng-leave.ng-leave-active,
+    &.ng-enter,
+    &.ng-move {
+        opacity: 0;
+    }
+
+    &.ng-leave,
+    &.ng-move.ng-move-active,
+    &.ng-enter.ng-enter-active {
+      opacity:1;
+    }
+}
+
+
+
+/* Keyframes */
+@keyframes slideUp {
+    0% {
+        transform: max-height 0.3s ease-out;
+        opacity: 1;
+    }
+
+    100% {
+        transform: max-height 0.3s ease-out;
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomFadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes almostFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes zoomFadeInRotate {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}

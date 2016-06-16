@@ -12,5 +12,15 @@
  */
 
 .page-home {
+	svg {
+		transition: fill $transition-hover-speed $transition-hover-easing;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
 
+		&:hover {
+			fill: blue;
+			cursor: pointer;
+		}
+	}
 }

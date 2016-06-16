@@ -11,18 +11,24 @@
 // ------------------------------------------------
 
 // Import Mixins
-@import "__mixins/mq";
-@import "__mixins/rg";
-@import "__mixins/mixins";
+@import "__mixins/mq"; // Media Queries
+@import "__mixins/rg"; // Responsive Grids
+@import "__mixins/mixins"; // Useful Mixins
 
 // Import Base Styles
 @import "__base/normalize";
-@import "__base/layout";
+@import "__base/variables";
+@import "__base/z-index";
 @import "__base/helpers";
+@import "__base/layout";
+@import "__base/base";
+@import "__base/accessibility";
 @import "__base/colours";
 @import "__base/fonts";
-@import "__base/base";
 @import "__base/buttons";
+@import "__base/form";
+@import "__base/animations";
+@import "__base/loaders";
 
 
 // ------------------------------------------------
@@ -42,3 +48,11 @@
 // Common Page Modules
 @import "../../modules/pages/page/page";
 @import "../../modules/pages/page-home/page-home";
+
+
+// ------------------------------------------------
+// Widget Styles
+// ------------------------------------------------
+
+@import "../../modules/widgets/widgets";
+@import "../../modules/widgets/widget-example/widget-example";

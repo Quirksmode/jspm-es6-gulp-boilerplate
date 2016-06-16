@@ -10,7 +10,6 @@
 /* exported $ */
 
 // Import Vendor Scripts e.g. Angular, jQuery
-import $                        	from 'jquery';
 import angular                  	from 'angular';
 import 'angular-ui-router';
 
@@ -21,9 +20,18 @@ import scrollOnClickModule          from './components/ui-widgets/scroll-on-clic
 import headerPrimaryModule          from './components/common/header-primary/header-primary.module';
 import footerPrimaryModule          from './components/common/footer-primary/footer-primary.module';
 
-// Page Specific Modules
+// Import Page Specific Modules
 import pageHomeModule          		from './pages/page-home/page-home.module';
 import pageSearchModule          	from './pages/page-search/page-search.module';
+
+// Import Widget Modules
+import widgetExampleModule          from './widgets/widget-example/widget-example.module';
+
+// Import Shared Services Module
+import servicesModule               from './services/services.module';
+
+// Import Shared Filters Module
+import filtersModule                from './filters/filters.module';
 
 
 // Setup the app module
@@ -41,7 +49,16 @@ export default angular.module('app',[
 
     // Page Specific Modules
     pageHomeModule.name,
-    pageSearchModule.name
+    pageSearchModule.name,
+
+    // Widget Modules
+    widgetExampleModule.name,
+
+    // Shared Services Module
+    servicesModule.name,
+
+    // Shared Filters Module
+    filtersModule.name
 
 ]).config(['$locationProvider',
     function($locationProvider) {

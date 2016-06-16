@@ -21,6 +21,7 @@ System.config({
     "clean-css": "npm:clean-css@3.4.8",
     "core-js": "npm:core-js@1.2.6",
     "jquery": "npm:jquery@3.0.0",
+    "moment": "npm:moment@2.13.0",
     "text": "github:systemjs/plugin-text@0.0.3",
     "github:angular-ui/ui-router@0.2.15": {
       "angular": "github:angular/bower-angular@1.4.8"

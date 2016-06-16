@@ -1,0 +1,22 @@
+/**
+ * @group css.modules.widgets
+ *
+ * 
+ *
+ * ## Usage
+ * Import into your main file using
+ *
+ * @example
+ *     @import "../../modules/widgets/widgets
+ *
+ */
+
+.widgets {
+		display: flex;
+	    flex-wrap: wrap;
+	.widget {
+		background: #ccc;
+		padding: 30px;
+		min-height: 200px;
+	}
+}

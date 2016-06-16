@@ -1,0 +1,64 @@
+/**
+ * Z-Index
+ * Define the z-index stacking for the site
+ * @group css.base.z-index
+ *
+ * @example
+ *     @include z-index(navigation);
+ */
+
+// ------------------------------------------------
+// Define Z-Index Order
+// ------------------------------------------------
+
+$z-index: (
+    // Accessibility links
+    acc-links               : 9000,
+
+    // Fixed Center Loader
+    loading--centered       : 2000,
+
+    // Modal
+    loading--overlay        : 1500,
+    modal              		: 1000,
+
+    // Components
+    header-primary__sticky-on       : 900,
+    header-primary__util            : 899,
+    header-primary__sticky-off      : 895,
+    header-primary__nav             : 891,
+    header-primary__search          : 890,
+    navigation         		        : 800,
+
+    page__loading--overlay  : 700,
+
+    // Post
+    post__btn               : 610,
+
+    // Page
+    page__btn--back         : 600,
+
+    // Custom Select
+    dropdown                : 500,
+
+	// Content Block Editor
+	block-controls			: 200,
+
+    footer             		: 100,
+
+    // Initial Loader
+    loading--initial        : -1
+);
+
+
+// ------------------------------------------------
+// Functional - Do Not Edit
+// ------------------------------------------------
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
