@@ -1,5 +1,3 @@
-// Have to import angular first before angular-mocks
-// https://github.com/Workiva/karma-jspm/issues/23
 import angular from 'angular';
 import 'angular-mocks';
 import PageSearchModule from './page-search.module'
@@ -26,23 +24,12 @@ describe('PageSearch', ()=>{
 	
 	describe('Controller', ()=>{
 		// test your controller here
-		
-		it('should have a name property [REMOVE]', ()=>{ // erase me if you remove this.name from the controller
+		it('should have a "name" property', ()=>{
 			let controller = makeController();
 			
 			expect(controller).to.have.property('name'); 
 		});
 	});
-	
-	describe('Template', ()=>{
-		// test the template
-		// use Regexes to test that you are using the right bindings {{  }}
-		
-		it('should have name in template [REMOVE]', ()=>{
-			expect(PageSearchTemplate).to.match(/{{\s?vm\.name\s?}}/g);
-		});
-	});
-	
 	
 	describe('Directive', ()=>{
 			// test the directive itself

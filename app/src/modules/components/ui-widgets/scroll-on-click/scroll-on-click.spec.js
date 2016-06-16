@@ -13,24 +13,12 @@ describe('scroll-on-click', () => {
 
     it('True = True', () => {
         // Test that testing is working
-        expect(true).toBe(true);
+        expect(true).to.equal(true);
     });
 
     describe('Directive', ()=>{
         // test the component/directive itself
         let directive = scrollOnClickDirective();
-
-        // it('should use the right template',()=>{
-        //     expect(component.template).to.equal(AboutTemplate);
-        // });
-
-        // it('should use controllerAs', ()=>{
-        //     expect(directive.controllerAs).toEqual('ctrl');
-        // });
-
-        // it('should use the right controller', ()=>{
-        //     expect(component.controller).to.equal(AboutController);
-        // });
     });
 
 });

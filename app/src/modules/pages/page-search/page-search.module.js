@@ -5,7 +5,7 @@ import 'angular-ui-router';
 import pageSearchDirective from './page-search.directive';
 
 
-export default angular.module('pageSearch', [
+let pageSearchModule = angular.module('pageSearch', [
 	'ui.router'
 ])
 .config(['$stateProvider',
@@ -18,3 +18,5 @@ export default angular.module('pageSearch', [
     }
 ])
 .directive('pageSearch', pageSearchDirective);
+
+export default pageSearchModule

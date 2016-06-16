@@ -3,6 +3,4 @@ class PageSearchController {
 		this.name = 'search';
 	}
 }
-
-
 export default PageSearchController;
