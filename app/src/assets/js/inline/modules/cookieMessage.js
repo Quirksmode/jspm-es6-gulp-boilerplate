@@ -12,8 +12,6 @@ function getCookie(cname) {
 }
 
 // Check cookie storage and hide if exists
-if( !getCookie('gealstommicrositecookie') ) {
-    document.body.className += 'cookie-message-show';
-    // Dynamically work out the padding to accomodate the fixed header
-    var headerHeight = document.getElementById('header-primary');
+if( !getCookie('ADDCOOKIENAMEHERE') ) {
+    //document.body.className += 'cookie-message-show';
 }

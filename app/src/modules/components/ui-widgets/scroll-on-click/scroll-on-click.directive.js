@@ -1,7 +1,5 @@
 'use strict';
 
-console.log("Scoll On Click UI Widget Loaded");
-
 /**
  * @class scrollOnClick
  */
@@ -27,8 +25,6 @@ function scrollOnClick() {
          */
 
         function animateScroll (e) {
-
-            console.log("scrolled");
 
             // If scrolling to an element add the sticky header height
             if(scope.scrollTo) {

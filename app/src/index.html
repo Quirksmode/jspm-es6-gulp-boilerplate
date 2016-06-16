@@ -40,17 +40,22 @@
 
     <link href="assets/css/styles.css" rel="stylesheet" />
 
-    <!-- inject:header:js -->
-    <!-- endinject -->
+    <!-- inline scripts -->
+    <script src="assets/js/inline/lib/modernizr-custom.js" inline></script> 
+    <script src="assets/js/inline/lib/picturefill.js" inline></script>
+    <script src="assets/js/inline/modules/detectUseragent.js" inline></script> 
+
 </head>
 
 <body>
     <header-primary></header-primary>
     <div ui-view></div>
     <footer-primary></footer-primary>
-    
-    <!-- inject:footer:js -->
-    <!-- endinject -->
+
+    <!-- inline scripts -->
+    <script src="assets/js/inline/lib/svg4everybody.js" inline></script>
+    <script src="assets/js/inline/lib/svginline.js" inline></script>
+    <script src="assets/js/inline/modules/cookieMessage.js" inline></script>
 
     <!-- app:dev:js -->
         <script src="jspm_packages/system.js"></script>

@@ -25,6 +25,7 @@
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-inject": "^3.0.0",
+    "gulp-inline-source": "^2.1.0",
     "gulp-jsdoc": "^0.1.5",
     "gulp-jsdoc3": "^0.1.0",
     "gulp-jshint": "^2.0.0",
@@ -54,7 +55,7 @@
       "angular": "github:angular/bower-angular@^1.4.7",
       "angular-mocks": "github:angular/bower-angular-mocks@^1.4.8",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
-      "jquery": "github:components/jquery@^2.1.4",
+      "jquery": "npm:jquery@^3.0.0",
       "text": "github:systemjs/plugin-text@^0.0.3"
     },
     "devDependencies": {

@@ -2,23 +2,23 @@
 // https://github.com/Workiva/karma-jspm/issues/23
 import angular from 'angular';
 import 'angular-mocks';
-import AboutModule from './about'
-import AboutController from './about.controller';
-import AboutComponent from './about.component';
-import AboutTemplate from './about.html!text';
+import PageSearchModule from './page-search.module'
+import PageSearchController from './page-search.controller';
+import PageSearchDirective from './page-search.directive';
+import PageSearchTemplate from './page-search.tpl.html!text';
 
-describe('About', ()=>{
+describe('PageSearch', ()=>{
 	let $rootScope,
 	makeController;
 
-	beforeEach(angular.mock.module(AboutModule.name));
+	beforeEach(angular.mock.module(PageSearchModule.name));
 	beforeEach(angular.mock.inject((_$rootScope_)=>{
 		$rootScope = _$rootScope_;
-		makeController = ()=> new AboutController();
+		makeController = ()=> new PageSearchController();
 	}));
 	
 	describe('Module', ()=>{
-		// test things about the component module
+		// test things about the directive module
 		// checking to see if it registers certain things and what not
 		// test for best practices with naming too
 		// test for routing
@@ -39,31 +39,25 @@ describe('About', ()=>{
 		// use Regexes to test that you are using the right bindings {{  }}
 		
 		it('should have name in template [REMOVE]', ()=>{
-			expect(AboutTemplate).to.match(/{{\s?vm\.name\s?}}/g);
+			expect(PageSearchTemplate).to.match(/{{\s?vm\.name\s?}}/g);
 		});
 	});
 	
 	
-	describe('Component', ()=>{
-			// test the component/directive itself
-			let component = AboutComponent();
+	describe('Directive', ()=>{
+			// test the directive itself
+			let directive = PageSearchDirective();
 			
 			it('should use the right template',()=>{
-				expect(component.template).to.equal(AboutTemplate);
+				expect(directive.template).to.equal(PageSearchTemplate);
 			});
 			
 			it('should use controllerAs', ()=>{
-				expect(component).to.have.property('controllerAs');
+				expect(directive).to.have.property('controllerAs');
 			});
 			
 			it('should use the right controller', ()=>{
-				expect(component.controller).to.equal(AboutController);
+				expect(directive.controller).to.equal(PageSearchController);
 			});
 	});
 });
-
- 
-
-
-
-
