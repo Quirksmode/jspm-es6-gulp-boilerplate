@@ -13,7 +13,8 @@ System.config({
   },
 
   map: {
-    "angular": "github:angular/bower-angular@1.4.8",
+    "angular": "github:angular/bower-angular@1.5.7",
+    "angular-animate": "github:angular/bower-angular-animate@1.5.7",
     "angular-mocks": "github:angular/bower-angular-mocks@1.4.8",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "babel": "npm:babel-core@5.8.34",
@@ -24,10 +25,13 @@ System.config({
     "moment": "npm:moment@2.13.0",
     "text": "github:systemjs/plugin-text@0.0.3",
     "github:angular-ui/ui-router@0.2.15": {
-      "angular": "github:angular/bower-angular@1.4.8"
+      "angular": "github:angular/bower-angular@1.5.7"
+    },
+    "github:angular/bower-angular-animate@1.5.7": {
+      "angular": "github:angular/bower-angular@1.5.7"
     },
     "github:angular/bower-angular-mocks@1.4.8": {
-      "angular": "github:angular/bower-angular@1.4.8"
+      "angular": "github:angular/bower-angular@1.5.7"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
@@ -131,6 +135,9 @@ System.config({
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:isarray@1.0.0": {
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:jquery@3.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"

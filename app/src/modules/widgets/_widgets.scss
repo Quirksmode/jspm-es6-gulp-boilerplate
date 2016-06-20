@@ -1,7 +1,7 @@
 /**
  * @group css.modules.widgets
  *
- * 
+ *
  *
  * ## Usage
  * Import into your main file using
@@ -12,11 +12,12 @@
  */
 
 .widgets {
-		display: flex;
-	    flex-wrap: wrap;
-	.widget {
-		background: #ccc;
-		padding: 30px;
-		min-height: 200px;
-	}
+    display: flex;
+    flex-wrap: wrap;
+
+    .widget {
+        background: #e2e2e2;
+        padding: 30px;
+        min-height: 200px;
+    }
 }

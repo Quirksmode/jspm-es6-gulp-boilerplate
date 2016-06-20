@@ -1,11 +1,11 @@
 'use strict';
 
 var browserSync = require('browser-sync');
-var gulp        = require('gulp');
-var config      = require('../config').browserSync;
+var gulp = require('gulp');
+var config = require('../config').browserSync;
 
 gulp.task('browser-sync', function() {
-  browserSync(config);
+    browserSync(config);
 });
 
 // Assign a shortcut task to BrowserSync

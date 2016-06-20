@@ -13,11 +13,11 @@
 
 import template from './nav-primary.tpl.html!text';
 
-let navPrimaryDirective = function() {
-	return {
-		template,
-		restrict: 'E',
-	};
+const navPrimaryDirective = function() {
+    return {
+        template: template,
+        restrict: 'E'
+    };
 };
 
 export default navPrimaryDirective;

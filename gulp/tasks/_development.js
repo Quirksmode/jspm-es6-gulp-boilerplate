@@ -1,15 +1,15 @@
 'use strict';
 
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
 gulp.task('development', ['clean'], function(cb) {
 
-  cb = cb || function() {};
+    cb = cb || function() {};
 
-  global.isProd = false;
+    global.isProd = false;
 
-  runSequence('styles', 'images', 'svg', 'fonts', 'move', 'inject-index', 'watch', cb);
+    runSequence('styles', 'eslint', 'images', 'svg', 'fonts', 'move', 'inject-index', 'watch', cb);
 
 });
 

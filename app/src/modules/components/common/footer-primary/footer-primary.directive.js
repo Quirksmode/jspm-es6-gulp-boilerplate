@@ -13,11 +13,11 @@
 
 import template from './footer-primary.tpl.html!text';
 
-let footerPrimaryDirective = function() {
-	return {
-		template,
-		restrict: 'E',
-	};
+const footerPrimaryDirective = function() {
+    return {
+        template: template,
+        restrict: 'E'
+    };
 };
 
 export default footerPrimaryDirective;

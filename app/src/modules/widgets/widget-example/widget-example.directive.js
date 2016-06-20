@@ -14,16 +14,16 @@
 import template from './widget-example.tpl.html!text';
 import controller from './widget-example.controller';
 
-let widgetExampleDirective = function(){
-	return {
-		template,
-		controller,
-		restrict: 'E',
-		controllerAs: 'ctrl',
-		scope: {},
-		bindToController: true,
-		replace: true
-	};
+const widgetExampleDirective = function() {
+    return {
+        template: template,
+        controller: controller,
+        restrict: 'E',
+        controllerAs: 'ctrl',
+        scope: {},
+        bindToController: true,
+        replace: true
+    };
 };
 
 export default widgetExampleDirective;

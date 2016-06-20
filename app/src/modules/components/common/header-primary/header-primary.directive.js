@@ -13,11 +13,11 @@
 
 import template from './header-primary.tpl.html!text';
 
-let headerPrimaryDirective = function() {
-	return {
-		template,
-		restrict: 'E',
-	};
+const headerPrimaryDirective = function() {
+    return {
+        template: template,
+        restrict: 'E'
+    };
 };
 
 export default headerPrimaryDirective;

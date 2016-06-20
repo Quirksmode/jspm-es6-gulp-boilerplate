@@ -6,47 +6,47 @@ import $ from 'jquery';
  * @class scrollOnClick
  */
 function scrollOnClick() {
-  return {
-    restrict: 'AC',
-    scope: {
-        scrollTo: '@',
-        scrollSpeed: '@',
-        stickyHeader: '@'
-    },
-    link: (scope, element) => {
-        let scrollSpeed = scope.scrollSpeed || 600,
-            scrollTo = scope.scrollTo || 'body, html',
-            stickyHeader = scope.stickyHeader || '',
-            topBar = 0;
+    return {
+        restrict: 'AC',
+        scope: {
+            scrollTo: '@',
+            scrollSpeed: '@',
+            stickyHeader: '@'
+        },
+        link: (scope, element) => {
+            let scrollSpeed = scope.scrollSpeed || 600,
+                scrollTo = scope.scrollTo || 'body, html',
+                stickyHeader = scope.stickyHeader || '',
+                topBar = 0;
 
-        /*
-         * Genertic click function to scroll to a specified element
-         *
-         * @method animateScroll
-         * @param {object} e - reference to the element
-         */
+            /*
+             * Genertic click function to scroll to a specified element
+             *
+             * @method animateScroll
+             * @param {object} e - reference to the element
+             */
 
-        function animateScroll (e) {
+            function animateScroll(e) {
 
-            // If scrolling to an element add the sticky header height
-            if(scope.scrollTo) {
-                topBar = angular.element(stickyHeader).outerHeight();
+                // If scrolling to an element add the sticky header height
+                if (scope.scrollTo) {
+                    topBar = angular.element(stickyHeader).outerHeight();
+                }
+
+                // Make sure the scroll to target exists
+                if ($(scrollTo).length > 0) {
+                    $('html, body').animate({
+                        scrollTop: $(scrollTo).offset().top - topBar
+                    }, Number(scrollSpeed));
+                }
+
+                e.preventDefault();
             }
 
-            // Make sure the scroll to target exists
-            if($(scrollTo).length > 0) {
-                $('html, body').animate({
-                    scrollTop: $(scrollTo).offset().top - topBar
-                }, Number(scrollSpeed));
-            }
+            element.on('click', animateScroll);
 
-            e.preventDefault();
         }
-
-        element.on('click', animateScroll);
-
-    }
-  };
+    };
 }
 
 scrollOnClick.$inject = [];

@@ -14,15 +14,15 @@
 import template from './page-home.tpl.html!text';
 import controller from './page-home.controller';
 
-let pageHomeDirective = function(){
-	return {
-		template,
-		controller,
-		restrict: 'E',
-		controllerAs: 'ctrl',
-		scope: {},
-		bindToController: true
-	};
+const pageHomeDirective = function() {
+    return {
+        template: template,
+        controller: controller,
+        restrict: 'E',
+        controllerAs: 'ctrl',
+        scope: {},
+        bindToController: true
+    };
 };
 
 export default pageHomeDirective;

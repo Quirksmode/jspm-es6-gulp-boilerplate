@@ -5,7 +5,7 @@
   * WidgetExample Module and Config
   */
 
-'use strict'
+'use strict';
 
 import angular from 'angular';
 import widgetExampleDirective from './widget-example.directive';

@@ -3,7 +3,9 @@
 	<p>{{ctrl.sharedValue}}</p>
 	<button class="btn btn--example" ng-click="ctrl.loadData()">Load API Data</button>
 
-	<div ng-repeat="item in ctrl.APIData.data | limitTo: 3" class="anim--fade-stagger">
-		<p>{{item.title}}</p>
-	</div>
+    <ul class="widget-example__list">
+	   <li ng-repeat="item in ctrl.APIData.data | limitTo: 3"  class="anim--fade-stagger">
+	       {{item.title}}
+	   </li>
+    </ul>
 </div>

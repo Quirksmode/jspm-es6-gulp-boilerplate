@@ -12,45 +12,45 @@
  */
 
 .page {
-	padding: 30px;
+    padding: 30px 0;
 
-	h1 {
-		margin-bottom: 20px;
-	}
+    h1 {
+        margin-bottom: 20px;
+    }
 
-	h2 {
-		margin-bottom: 20px;
-	}
+    h2 {
+        margin-bottom: 20px;
+    }
 
-	p {
-		margin-bottom: 10px;
+    p {
+        margin-bottom: 10px;
 
-		@include mq($from: tablet) {
-			margin-bottom: 20px;
-		}
+        @include mq($from: tablet) {
+            margin-bottom: 20px;
+        }
 
-		@include mq($from: smalldesktop) {
-			margin-bottom: 30px;
-		}
+        @include mq($from: smalldesktop) {
+            margin-bottom: 30px;
+        }
 
-		@include mq($from: desktop) {
-			margin-bottom: 40px;
-		}
-	}
+        @include mq($from: desktop) {
+            margin-bottom: 40px;
+        }
+    }
 
-	&__section-padding {
-		margin-bottom: 10px;
+    &__section-padding {
+        margin-bottom: 10px;
 
-		@include mq($from: tablet) {
-			margin-bottom: 20px;
-		}
+        @include mq($from: tablet) {
+            margin-bottom: 20px;
+        }
 
-		@include mq($from: smalldesktop) {
-			margin-bottom: 30px;
-		}
+        @include mq($from: smalldesktop) {
+            margin-bottom: 30px;
+        }
 
-		@include mq($from: desktop) {
-			margin-bottom: 40px;
-		}
-	}
+        @include mq($from: desktop) {
+            margin-bottom: 40px;
+        }
+    }
 }

@@ -1,4 +1,4 @@
-var gulp   = require('gulp');
+var gulp = require('gulp');
 var config = require('../config');
 var path = require('path');
 var jspm = require('jspm');
@@ -6,7 +6,7 @@ var jspm = require('jspm');
 /**
  * Create JS production bundle.
  */
-gulp.task('systemjs-builder', function (cb) {
+gulp.task('systemjs-builder', function(cb) {
     // load SystemJS config from file
     jspm.setPackagePath('.'); // optional
     var builder = new jspm.Builder();
@@ -14,8 +14,7 @@ gulp.task('systemjs-builder', function (cb) {
     // Build a self-executing bundle (ie. Has SystemJS built in and auto-imports the 'app' module)
     builder.buildStatic(
         config.systemjsBuilder.src,
-        config.systemjsBuilder.dest,
-        {
+        config.systemjsBuilder.dest, {
             minify: true,
             sourceMaps: false
         }

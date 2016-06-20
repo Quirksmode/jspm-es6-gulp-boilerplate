@@ -6,18 +6,18 @@
  */
 
 class HomeController {
-	constructor($scope, PageDataService){
-		this.$scope = $scope;
-		this.PageDataService = PageDataService;
+    constructor($scope, PageDataService) {
+        this.$scope = $scope;
+        this.PageDataService = PageDataService;
 
-		this.name = 'Home Page';
-		this.sharedValue = this.PageDataService.data.sharedValue;
+        this.name = 'Home Page';
+        this.sharedValue = this.PageDataService.data.sharedValue;
 
-		this._init();
-	}
+        this._init();
+    }
 
 
-	/**
+    /**
      * ------------------------------------------------------------------------
      * Private
      * ------------------------------------------------------------------------
@@ -28,12 +28,11 @@ class HomeController {
         this._setupWatchers();
     }
 
-	_setupWatchers() {
+    _setupWatchers() {
         // Watch the PageDataService for changes
         this.$scope.$watch(() => {
             return this.PageDataService.data.sharedValue;
         }, (newValue, oldValue) => {
-        	console.log('shared value');
             if (newValue === oldValue) return;
             this.sharedValue = newValue;
         }, true);

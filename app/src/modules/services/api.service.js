@@ -68,7 +68,7 @@ class APIService {
             });
     }
 
-    static factory($http){
+    static factory($http) {
         return new APIService($http);
     }
 }

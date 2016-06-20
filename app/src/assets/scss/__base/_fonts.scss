@@ -22,18 +22,16 @@ $font-arial: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
 // Font Sizing
 html {
-	font-size: 62.5%;
-	-webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+    font-size: 62.5%;
 }
 
 body {
-	font-family: $font-arial;
+    font-family: $font-arial;
 }
 
 // Heading Styles
 h1 {
-	@include font(40, 45, $font-arial);
+    @include font(40, 45, $font-arial);
     font-weight: 300;
 }
 
@@ -45,7 +43,7 @@ h3 {
 p,
 li,
 a {
-	@include font(14, 18);
+    @include font(14, 18);
 
     @include mq($from: tablet) {
         @include font(15, 19);
@@ -57,7 +55,7 @@ a {
 }
 
 a {
-	@include font(14, 18);
+    @include font(14, 18);
     transition: color $transition-hover-speed $transition-hover-easing;
     text-decoration: none;
 }

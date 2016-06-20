@@ -1,7 +1,7 @@
 /**
  * @group css.modules.widgets.widget-example
  *
- * 
+ *
  *
  * ## Usage
  * Import into your main file using
@@ -12,5 +12,15 @@
  */
 
 .widget-example {
+    .btn--example {
+        margin-bottom: 30px;
+    }
 
+    &__list {
+        padding-left: 20px;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
 }

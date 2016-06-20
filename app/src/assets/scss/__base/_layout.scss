@@ -67,11 +67,9 @@ $mq-breakpoints: (
 
 // Widgets Grid
 @include rg-create-grid(
-    $grid-class:    "grid-widgets",
-    $width:         1280px,
-    $gutter:        40px,
-    $margin:        16px,
-    $column-class:  "grid-widgets__col",
-    $breakpoint:    ((tablet         2)
-                    (smalldesktop    3)
-                    (largedesktop    4)));
+    $grid-class: "grid-widgets",
+    $width: 1280px,
+    $gutter: 40px,
+    $margin: 16px,
+    $column-class: "grid-widgets__col",
+    $breakpoint: ((tablet 2) (smalldesktop 3) (largedesktop 4)));

@@ -1,6 +1,6 @@
 class PageSearchController {
-	constructor(){
-		this.name = 'Search Page';
-	}
+    constructor() {
+        this.name = 'Search Page';
+    }
 }
 export default PageSearchController;

@@ -20,7 +20,7 @@ $z-index: (
 
     // Modal
     loading--overlay        : 1500,
-    modal              		: 1000,
+    modal                   : 1000,
 
     // Components
     header-primary__sticky-on       : 900,
@@ -28,7 +28,7 @@ $z-index: (
     header-primary__sticky-off      : 895,
     header-primary__nav             : 891,
     header-primary__search          : 890,
-    navigation         		        : 800,
+    navigation                      : 800,
 
     page__loading--overlay  : 700,
 
@@ -41,10 +41,10 @@ $z-index: (
     // Custom Select
     dropdown                : 500,
 
-	// Content Block Editor
-	block-controls			: 200,
+    // Content Block Editor
+    block-controls          : 200,
 
-    footer             		: 100,
+    footer                  : 100,
 
     // Initial Loader
     loading--initial        : -1
@@ -56,9 +56,9 @@ $z-index: (
 // ------------------------------------------------
 
 @function z-index($key) {
-  @return map-get($z-index, $key);
+    @return map-get($z-index, $key);
 }
 
 @mixin z-index($key) {
-  z-index: z-index($key);
+    z-index: z-index($key);
 }

@@ -108,8 +108,8 @@ module.exports = {
             src + '/assets/js/**/modules/*.js',
             src + '/modules/**/*.js',
             '!' + src + '/assets/js/lib/**/*.js',
-            '!' + src + '/assets/js/inline/header/lib/**/*.js',
-            '!' + src + '/assets/js/inline/footer/lib/**/*.js'
+            '!' + src + '/assets/js/inline/**/*.js',
+            '!' + src + '/modules/**/*.spec.js',
         ]
     },
 
